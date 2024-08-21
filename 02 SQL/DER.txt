@@ -1,0 +1,70 @@
++----------------+
+|  Customers     |
++----------------+
+| id (PK)        |
+| name           |
+| nickname       |
+| email          |
+| telephone      |
+| gender         |
+| birthdate      |
+| address        |
+| city           |
+| country        |
++----------------+
+     | 1
+     |
+     | N
+     |
++----------------+
+|    Orders      |
++----------------+
+| id (PK)        |
+| buyer_id (FK)  |
+| seller_id (FK) |
+| date           |
++----------------+
+     | 1
+     |
+     | N
+     |
++----------------+
+|  OrderItems    |
++----------------+
+| id (PK)        |
+| order_id (FK)  |
+| item_id (FK)   |
+| quantity       |
++----------------+
+     | N
+     |
+     | 1
+     |
++----------------+
+|    Items       |
++----------------+
+| id (PK)        |
+| category_id (FK)|
+| name           |
+| price          |
+| status         |
++----------------+
+     | N
+     |
+     | 1
+     |
++----------------+
+|  Categories    |
++----------------+
+| id (PK)        |
+| name           |
++----------------+
+
++------------------------------+
+| ItemStatusEndOfDay           |
++------------------------------+
+| item_id (PK, FK)             |
+| price                        |
+| status                       |
+| record_date                  |
++------------------------------+
